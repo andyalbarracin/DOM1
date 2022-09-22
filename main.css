@@ -10,6 +10,7 @@ html{
 body{
     margin: 0;
     padding:0;
+    
 }
 
 
@@ -35,12 +36,9 @@ main{
     margin:auto;
     padding-top:100px; 
     color:#3f3f3f;
+    background-image: url("bg1.png");
      
 }
-
-
-
-
 
 button{
     display: inline-block;
@@ -48,7 +46,7 @@ button{
     height: 40px;
     border: none;
     border-radius: 5px;
-    background-color: orange;
+    background-color: rgb(21, 52, 226);
     color: #fff;
     font-size: 1.7rem;
     font-weight: bold;
@@ -75,7 +73,7 @@ form input{
     width: 115px;
     height:25px;
     font-size: 1.8rem;
-    border-color:orange;
+    border-color:rgb(21, 52, 226);
     border-radius: 5px;
     border-width: 2px;
     text-align:center;
@@ -85,7 +83,7 @@ form input{
 form select{
     width: 90px;
     font-size: 1.8rem;
-    border-color:orange;
+    border-color: rgb(21, 52, 226);
     border-radius: 5px;
     background-color: transparent;
     border-width: 2px;

@@ -1,6 +1,5 @@
 
-let edad = 16;
-let trago = '';
+//Declaramos los precios de las polizas
 
 const cat1A = 2500; //16-25 años, hombre
 const cat1B = 2350; //16-25 años, mujer
@@ -11,11 +10,13 @@ const cat3B = 1250; // 40-85 pero menos de 86 años  mujer
 
 //El evento generaCuota
 
+let genero = document.getElementById('genero').value;
 const generaCuota = (genero, edad) => {
     
     //Declaro las variables
     genero = document.getElementById('genero').value;
     edad = document.getElementById('edad').value;
+    user = document.getElementById('user').value;
     let msj = '';
     let precio = 0;
 
@@ -28,29 +29,29 @@ const generaCuota = (genero, edad) => {
     //Si es menor de 16
 
     else if(edad < 16){
-        msj = 'Todavia no puede comprar seguro de auto';
+        msj =`Hola ${user}, todavía no podes adquirir una poliza: `;
     }
     else if((edad < 26) && (genero === 'hombre')){
-        msj ='El precio de su poliza es: ';
+        msj =`Hola ${user}, el precio de su poliza es: `;
         precio = cat1A;
     }else if((edad < 26) && (genero === 'mujer')){
-        msj ='El precio de su poliza es: ';
+        msj =`Hola ${user}, el precio de su poliza es: `;
         precio = cat1B;   
     }else if((edad < 40) && (genero === 'hombre')){
-        msj ='El precio de su poliza es: ';
+        msj =`Hola ${user}, el precio de su poliza es: `;
         precio = cat2A;
     }else if((edad < 40) && (genero === 'mujer')){
-        msj ='El precio de su poliza es: ';
+        msj =`Hola ${user}, el precio de su poliza es: `;
         precio = cat2B;
     }else if(edad >=40 && edad <=85 && genero === 'hombre'){
-         msj = 'El precio de su poliza es: ';
+        msj =`Hola ${user}, el precio de su poliza es: `;
          precio = cat3A;
      }else if(edad >=40 && edad <=85 && genero === 'mujer'){
-        msj = 'El precio de su poliza es: ';
+        msj =`Hola ${user}, el precio de su poliza es: `;
         precio = cat3B;
     } 
     else {
-        msj = 'Lo sentimos no tenemos poliza disponible';
+        msj =`Hola ${user}, lo sentimos no tenemos poliza disponible.`;
     }
    
     
